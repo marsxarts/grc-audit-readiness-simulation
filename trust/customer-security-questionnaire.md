@@ -4,7 +4,6 @@
 
 Enterprise customers routinely perform security due diligence before signing contracts with SaaS providers. The purpose of this questionnaire is to demonstrate NimbusVault's security posture and provide evidence supporting key security controls.
 
-> **Scenario:** A prospective healthcare customer has requested security documentation as part of their third-party risk assessment prior to contract execution.
 
 ---
 
