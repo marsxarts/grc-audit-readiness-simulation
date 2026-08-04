@@ -1,3 +1,7 @@
+# Mock Audit Finding Report
+**Audit Type:** Internal Security & Access Control Audit  
+**Framework Alignment:** NIST SP 800-53 / ISO 27001 / SOC 2 Access Management Principles  
+
 # Audit Finding: DEL-2023-01
 
 ## Finding ID
