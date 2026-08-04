@@ -5,8 +5,6 @@
 **Purpose:**  
 This tracker documents the corrective and preventive actions taken to address audit findings and ensure identified control weaknesses are remediated effectively.
 
-> **Auditor Note:**  
-> A remediation plan cannot simply state "we will do better." Effective GRC programs require documented corrective actions, assigned ownership, target completion dates, validation evidence, and ongoing monitoring to prevent recurrence.
 
 ---
 
