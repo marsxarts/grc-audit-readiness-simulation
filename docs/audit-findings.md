@@ -7,8 +7,6 @@
 **Audit Period:** Q2 2023  
 **Finding Status:** Open - Remediation Required  
 
-> **Auditor Note:**  
-> A clean audit is uncommon. Findings are an expected part of a mature security program. The goal of GRC is not simply to identify deficiencies, but to manage risk, determine root cause, implement corrective actions, and validate that controls are operating effectively.
 
 ---
 
