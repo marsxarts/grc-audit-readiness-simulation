@@ -1,162 +1,112 @@
 # Mock Audit Finding Report
 
-## Audit Overview
-
-**Audit Type:** Internal Security & Access Control Audit  
-**Framework Alignment:** NIST SP 800-53 / ISO 27001 / SOC 2 Access Management Principles  
-**Audit Period:** Q2 2023  
-**Finding Status:** Open - Remediation Required  
-
-
----
-
-# Finding Details
+# Audit Finding: DEL-2023-01
 
 ## Finding ID
+
 **DEL-2023-01**
 
-## Control ID
-**AC-02 - Account Management**
+## Title
 
-## Control Area
-Identity and Access Management (IAM)
+**Delayed User Offboarding**
 
-## Control Objective
+## Severity
 
-Ensure user accounts are properly managed throughout the employee lifecycle, including timely provisioning, modification, and termination of access privileges.
+**High**
 
----
+## Failed Control
 
-# Finding Description
-
-During a review of Q2 employee terminations, auditors sampled **15 departed employees** to validate compliance with the organization's access revocation requirements.
-
-Testing identified that:
-
-- **3 out of 15 terminated users** did not have access revoked within the required **24-hour Service Level Agreement (SLA)**.
-- Azure Active Directory and GitHub access remained active for an average of **9 days following termination**.
-- Offboarding activities were not consistently initiated or tracked through the approved IT workflow.
+**AC-02 - Account Management (Terminated User Revocation)**
 
 ---
 
-# Affected Systems
+## Observation
 
-| System | Access Type | Impact |
-|---|---|---|
-| Azure Active Directory | User authentication and cloud resources | Unauthorized account access |
-| GitHub Enterprise | Source code repositories | Potential exposure of proprietary code |
-| Production environments | Application access pathways | Potential unauthorized changes |
+During the review of Q2 employee terminations, auditors sampled **15 departed employees** to evaluate compliance with the organization's user access termination procedures.
+
+The audit identified that **3 out of 15 terminated employees** did not have their Azure Active Directory and GitHub access revoked within the required **24-hour SLA**.
+
+Access remained active for an average of **9 days after termination**, indicating that the offboarding process was not consistently executed within required timelines.
 
 ---
 
-# Risk / Business Impact
+## Risk
 
-Failure to promptly disable terminated user accounts creates a risk of unauthorized access to organizational resources.
+Delayed removal of user access increases the likelihood of unauthorized access to organizational systems after employment termination.
 
 Potential impacts include:
 
 - Unauthorized access to proprietary source code
-- Data exposure or exfiltration
-- Unauthorized modifications to production environments
-- Compliance violations related to access control requirements
-- Increased likelihood of insider threat activity
+- Exposure of sensitive organizational data
+- Unauthorized changes to production environments
+- Increased insider threat risk
+- Potential non-compliance with security and access control requirements
 
 ---
 
-# Severity Classification
+## Root Cause
 
-**Severity:** High  
-**Classification:** Major Exception  
+The termination process relied on manual coordination between Human Resources and Information Technology.
 
-**Risk Rating Rationale:**
+HR completed employee termination actions within the payroll system but did not consistently trigger the required ServiceNow offboarding workflow for IT.
 
-The finding impacts access controls protecting critical systems. Former employees retaining active credentials after termination increases the likelihood of unauthorized access and creates a significant security exposure.
+Contributing factors included:
 
----
-
-# Root Cause Analysis
-
-## Primary Root Cause
-
-The organization relied on a manual employee offboarding process that lacked automated communication between Human Resources and Information Technology systems.
-
-## Contributing Factors
-
-- HR termination records were not automatically synchronized with IAM systems.
-- ServiceNow offboarding tickets were manually created and dependent on HR personnel completing an additional step.
-- No automated alerting existed for overdue termination actions.
-- Access review processes did not identify delayed account removal quickly enough.
+- Lack of automated HR-to-IAM integration
+- Manual dependency for ticket creation
+- Limited monitoring of termination SLA compliance
 
 ---
 
-# Corrective and Preventive Action (CAPA)
+## Recommendation
 
-## Immediate Corrective Actions
+Implement an automated Joiner-Mover-Leaver (JML) process to improve termination access management.
 
-| Action | Owner | Status |
-|---|---|---|
-| Disable remaining terminated user accounts | IAM Team | Completed |
-| Review terminated user activity logs for unauthorized access | Security Operations | Completed |
-| Document affected accounts and remediation evidence | GRC Team | Completed |
+Recommended actions:
+
+1. Integrate HR termination events with identity management systems.
+2. Automatically generate ServiceNow offboarding tickets upon termination.
+3. Implement automated alerts for overdue access removal activities.
+4. Perform periodic access reviews to validate termination control effectiveness.
 
 ---
 
-## Long-Term Preventive Actions
+## Management Response
 
-| Action | Owner | Target Date | Status |
+Management agrees with the finding and recognizes the risk associated with delayed user access removal.
+
+The organization will implement automated offboarding workflows between HR, ServiceNow, and identity management platforms to reduce manual errors and improve compliance with the 24-hour termination SLA.
+
+Planned remediation activities include:
+
+- IAM workflow automation
+- Updated termination procedures
+- Quarterly termination access audits
+- Evidence collection improvements for future audits
+
+---
+
+## Corrective Action Plan (CAPA)
+
+| Action Item | Owner | Target Date | Status |
 |---|---|---|---|
-| Integrate HR termination events with IAM workflows | IAM Engineering | Q4 2023 | In Progress |
-| Require automated ServiceNow offboarding ticket creation | IT Operations | Q4 2023 | Planned |
-| Implement automated access revocation alerts | Security Engineering | Q1 2024 | Planned |
-| Perform quarterly termination access audits | GRC Team | Ongoing | Planned |
+| Disable remaining inactive terminated accounts | IAM Team | Completed | Closed |
+| Automate HR termination notifications | IAM Engineering | Q4 2023 | In Progress |
+| Configure SLA monitoring alerts | Security Operations | Q1 2024 | Planned |
+| Update offboarding procedures | GRC Team | Q1 2024 | Planned |
 
 ---
 
-# Control Improvement Recommendation
+## Evidence Required for Closure
 
-Implement an automated Joiner-Mover-Leaver (JML) lifecycle management process:
-
-1. HR initiates termination event.
-2. Identity provider receives termination signal.
-3. User access is automatically disabled.
-4. Remaining privileged access is reviewed.
-5. Evidence is captured for audit validation.
-
-Recommended technologies/process improvements:
-
-- Azure AD Lifecycle Workflows
-- ServiceNow ITSM automation
-- Identity Governance and Administration (IGA) solution
-- Automated compliance reporting dashboards
+- Azure AD account disablement logs
+- GitHub access removal records
+- ServiceNow offboarding tickets
+- Updated termination procedures
+- Access review reports
 
 ---
 
-# Validation & Evidence Requirements
+## Finding Status
 
-The following evidence should be collected before closure:
-
-☐ ServiceNow offboarding workflow records  
-☐ Azure AD account disablement logs  
-☐ GitHub access removal records  
-☐ IAM audit logs  
-☐ Access review reports  
-☐ Updated offboarding procedures  
-
----
-
-# Closure Criteria
-
-Finding may be closed when:
-
-- All terminated accounts are revoked within the required SLA.
-- Automated workflow improvements are implemented.
-- Evidence demonstrates consistent control operation.
-- A follow-up audit confirms remediation effectiveness.
-
----
-
-# Final Audit Assessment
-
-**Finding Status:** Open  
-
-The organization has identified a gap in its termination access management process. While no confirmed misuse of accounts was identified, delayed access removal creates unnecessary exposure. Implementing automated identity lifecycle controls will reduce operational dependency on manual processes and improve compliance maturity.
+**Open - Remediation In Progress**
