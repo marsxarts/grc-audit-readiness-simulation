@@ -1,5 +1,3 @@
-# Mock Audit Finding Report
-
 # Audit Finding: DEL-2023-01
 
 ## Finding ID
