@@ -30,9 +30,9 @@ This tracker documents the corrective and preventive actions taken to address au
 
 | Action ID | Corrective / Preventive Action | Owner | Due Date | Priority | Status |
 |---|---|---|---|---|---|
-| CAPA-001 | Immediately revoke the 3 active terminated user accounts identified during audit testing. | IT Administrator | Oct 25, 2023 | High | ✅ Closed |
-| CAPA-002 | Integrate HR system with Entra ID through API automation to disable accounts when termination status changes. | IT / HR Teams | Nov 15, 2023 | High | 🔄 In Progress |
-| CAPA-003 | Update employee offboarding policy and procedures to reflect the automated termination workflow. | GRC Team | Nov 20, 2023 | Medium | ⏳ Not Started |
+| CAPA-001 | Immediately revoke the 3 active terminated user accounts identified during audit testing. | IT Administrator | Oct 25, 2023 | High |  Closed |
+| CAPA-002 | Integrate HR system with Entra ID through API automation to disable accounts when termination status changes. | IT / HR Teams | Nov 15, 2023 | High |  In Progress |
+| CAPA-003 | Update employee offboarding policy and procedures to reflect the automated termination workflow. | GRC Team | Nov 20, 2023 | Medium |  Not Started |
 
 ---
 
