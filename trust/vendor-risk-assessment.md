@@ -116,4 +116,3 @@ This assessment supports the following compliance documentation within the Nimbu
 - Enterprise Risk Register
 - Evidence Register
 - Customer Security Questionnaire
-- Executive Dashboard
