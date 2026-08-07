@@ -43,7 +43,6 @@ The simulated compliance program incorporates controls mapped across multiple in
 
 # Compliance Scope
 
-Properly defining audit scope ensures that audit efforts remain focused on systems, data, and processes that directly support customer services while avoiding unnecessary audit overhead.
 
 | **Category** | **In Scope** | **Out of Scope** |
 |--------------|--------------|------------------|
@@ -58,7 +57,6 @@ Properly defining audit scope ensures that audit efforts remain focused on syste
 
 # Repository Contents
 
-This repository demonstrates each stage of a modern GRC program.
 
 | Section | Description |
 |----------|-------------|
